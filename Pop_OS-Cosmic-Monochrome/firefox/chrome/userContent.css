@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Monochrome Dark - userContent.css
+   Based on Cosmic Night v2 (variables only)
+
+   Color only. No size / position changes.
+
+   Install:  chrome/userContent.css   (same pref + restart as userChrome.css)
+   ========================================================================== */
+
+@-moz-document url-prefix("about:newtab"),
+               url-prefix("about:home"),
+               url-prefix("about:privatebrowsing") {
+
+  :root {
+    --newtab-primary-action-background: #aaaaaa !important;
+    --newtab-primary-action-background-dimmed: rgba(170, 170, 170, 0.25) !important;
+
+    --newtab-focus-border: #aaaaaa !important;
+    --newtab-focus-outline: #aaaaaa !important;
+    --newtab-textbox-focus-color: #aaaaaa !important;
+
+    --in-content-accent-color: #aaaaaa !important;
+    --in-content-accent-color-active: #cccccc !important;
+    --in-content-focus-outline-color: #aaaaaa !important;
+
+    --link-color: #bdbdbd !important;
+    --link-color-hover: #dddddd !important;
+  }
+}
