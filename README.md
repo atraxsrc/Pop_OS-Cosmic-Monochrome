@@ -126,7 +126,7 @@ Not bundled. Gray / dark packs that work on COSMIC:
 - Tela Circle `grey-dark` / `black-dark`
 - kora-pgrey
 
-Wallpapers: near-black with mid-gray line art. The monochrome COSMIC helmet and controller mosaic pair with `#111111` windows.
+Wallpapers: https://github.com/atraxsrc/tokyonight-wallpapers
 
 ---
 
