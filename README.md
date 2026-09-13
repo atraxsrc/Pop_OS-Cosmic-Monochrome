@@ -2,6 +2,8 @@
 
 # Pop!_OS · COSMIC · Monochrome
 
+<img width="3802" height="2115" alt="githubmono" src="https://github.com/user-attachments/assets/ca22c3a3-0848-43f7-a675-6f079dcc553e" />
+
 Sibling rice to [Pop_OS-Cosmic-TokyoNight](https://github.com/atraxsrc/Pop_OS-Cosmic-TokyoNight).
 Same machine, same COSMIC desktop, gray accent instead of Tokyo Night blue / Cosmic Night lime.
 
