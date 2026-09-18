@@ -56,7 +56,6 @@ There is no hue. Status colours are lighter grays, not green / red.
 │   └── README.md
 ├── scripts
 │   └── update_system.sh         # nala + flatpak, monochrome ANSI
-├── screenshots
 ├── LICENSE
 └── README.md
 ```
@@ -153,11 +152,9 @@ cd Pop_OS-Cosmic-Monochrome
 
 ## Switch back to Tokyo Night
 
-The Tokyo Night repo has no COSMIC `.ron` or terminal scheme to import, so
-steps 1 and 2 are by hand.
-
-1. Appearance → Dark → pick the accent and background colours by hand
-2. Terminal → View → Settings → Appearance → Color scheme (dark) → your previous scheme
+1. Appearance → Dark → Import `cosmic/TokyoNight.ron` from the Tokyo Night repo
+2. Terminal → View → Settings → Appearance → Color scheme (dark) → your previous
+   scheme (the Tokyo Night repo has no terminal scheme file)
 3. `../Pop_OS-Cosmic-TokyoNight/firefox/install.sh`
 
 To switch to DarkGold instead, follow that repo's README.
