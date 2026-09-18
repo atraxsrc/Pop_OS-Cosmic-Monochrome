@@ -10,16 +10,15 @@ set -eo pipefail
 #  dim:     #636363
 # ─────────────────────────────────────────────
 
-# Monochrome Dark — using $'...' so escape bytes are stored at assignment time
+# Monochrome Dark - using $'...' so escape bytes are stored at assignment time
 # and work correctly with both echo -e and printf "%s"
-CYAN=$'\033[38;2;189;189;189m'    # #bdbdbd  – section headers
-BLUE=$'\033[38;2;167;167;167m'    # #a7a7a7  – info / commands
-PURPLE=$'\033[38;2;204;204;204m'  # #cccccc  – highlights
-GREEN=$'\033[38;2;204;204;204m'   # #cccccc  – success
-YELLOW=$'\033[38;2;170;170;170m'  # #aaaaaa  – warnings
-ORANGE=$'\033[38;2;130;130;130m'  # #828282  – skipped
-RED=$'\033[38;2;221;221;221m'     # #dddddd  – errors
-DIM=$'\033[38;2;99;99;99m'        # #636363  – comments / dim text
+EDGE=$'\033[38;2;189;189;189m'     # #bdbdbd  - section headers, logo rule
+CONTROL=$'\033[38;2;167;167;167m'  # #a7a7a7  - info / commands
+HIGH=$'\033[38;2;204;204;204m'     # #cccccc  - success
+ACCENT=$'\033[38;2;170;170;170m'   # #aaaaaa  - warnings, logo rule
+MUTE=$'\033[38;2;130;130;130m'     # #828282  - skipped
+HIGHER=$'\033[38;2;221;221;221m'   # #dddddd  - errors
+DIM=$'\033[38;2;99;99;99m'         # #636363  - comments / dim text
 BOLD=$'\033[1m'
 RESET=$'\033[0m'
 
@@ -27,14 +26,14 @@ RESET=$'\033[0m'
 
 print_header() {
     echo
-    echo -e "${CYAN}${BOLD}┌─ $1 ${DIM}──────────────────────────────────────${RESET}"
+    echo -e "${EDGE}${BOLD}┌─ $1 ${DIM}──────────────────────────────────────${RESET}"
 }
 
-print_success() { echo -e "  ${GREEN}✓ $1${RESET}"; }
-print_info()    { echo -e "  ${BLUE}→ $1${RESET}"; }
-print_warn()    { echo -e "  ${YELLOW}⚠ $1${RESET}"; }
-print_skip()    { echo -e "  ${ORANGE}⊘ $1${RESET}"; }
-print_error()   { echo -e "  ${RED}✗ $1${RESET}"; }
+print_success() { echo -e "  ${HIGH}✓ $1${RESET}"; }
+print_info()    { echo -e "  ${CONTROL}→ $1${RESET}"; }
+print_warn()    { echo -e "  ${ACCENT}⚠ $1${RESET}"; }
+print_skip()    { echo -e "  ${MUTE}⊘ $1${RESET}"; }
+print_error()   { echo -e "  ${HIGHER}✗ $1${RESET}"; }
 print_dim()     { echo -e "  ${DIM}$1${RESET}"; }
 
 command_exists() { command -v "$1" >/dev/null 2>&1; }
@@ -125,10 +124,6 @@ update_snap() {
 
 # ── Logo ───────────────────────────────────────────────────────────────────────
 
-# Monochrome logo accents — global scope so $'...' escapes work correctly
-TEAL=$'\033[38;2;170;170;170m'   # #aaaaaa  primary gray
-ORG=$'\033[38;2;189;189;189m'    # #bdbdbd  border gray
-
 # Banner rows, ANSI Shadow figlet font. All 46 columns wide; keep them that way
 # or the gradient below will drift out of alignment with the letterforms.
 LOGO_ROWS=(
@@ -180,7 +175,7 @@ print_logo() {
     done
 
     echo
-    printf "  ${TEAL}━━━━━━━━━━━━━━━━━━━━━━━${ORG}━━━━━━━━━━━━━━━━━━━━━━━${RESET}\n"
+    printf "  ${ACCENT}━━━━━━━━━━━━━━━━━━━━━━━${EDGE}━━━━━━━━━━━━━━━━━━━━━━━${RESET}\n"
     printf "  ${DIM}  Pop!_OS · COSMIC DE · System Update${RESET}\n"
     printf "  ${DIM}  %s${RESET}\n" "$(date '+%A %d %B %Y  %H:%M:%S')"
     echo
@@ -206,8 +201,8 @@ main() {
     duration=$((end_time - start_time))
 
     echo
-    echo -e "${CYAN}${BOLD}└─ All done ${DIM}──────────────────────────────────${RESET}"
-    printf "   ${GREEN}✓ Completed in ${BOLD}%dm %ds${RESET}\n" \
+    echo -e "${EDGE}${BOLD}└─ All done ${DIM}──────────────────────────────────${RESET}"
+    printf "   ${HIGH}✓ Completed in ${BOLD}%dm %ds${RESET}\n" \
         $((duration / 60)) $((duration % 60))
     echo
 }

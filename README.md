@@ -4,8 +4,9 @@
 
 <img width="3802" height="2115" alt="githubmono" src="https://github.com/user-attachments/assets/ca22c3a3-0848-43f7-a675-6f079dcc553e" />
 
-Sibling rice to [Pop_OS-Cosmic-TokyoNight](https://github.com/atraxsrc/Pop_OS-Cosmic-TokyoNight).
-Same machine, same COSMIC desktop, gray accent instead of Tokyo Night blue / Cosmic Night lime.
+Sibling rice to [Pop_OS-Cosmic-TokyoNight](https://github.com/atraxsrc/Pop_OS-Cosmic-TokyoNight)
+and [Pop_OS-Cosmic-DarkGold](https://github.com/atraxsrc/Pop_OS-Cosmic-DarkGold).
+Same machine, same COSMIC desktop, gray accent instead of Tokyo Night blue / Cosmic Night lime / Harbor Dark gold.
 
 ![Pop!_OS](https://img.shields.io/badge/Pop!_OS-24.04_LTS-aaaaaa?style=for-the-badge&logo=popos&logoColor=white)
 ![COSMIC](https://img.shields.io/badge/COSMIC-1.0.0-bdbdbd?style=for-the-badge)
@@ -152,9 +153,14 @@ cd Pop_OS-Cosmic-Monochrome
 
 ## Switch back to Tokyo Night
 
-1. Appearance → Import the Tokyo Night COSMIC theme (or pick accent colors by hand)
-2. Terminal → import the Tokyo Night scheme
+The Tokyo Night repo has no COSMIC `.ron` or terminal scheme to import, so
+steps 1 and 2 are by hand.
+
+1. Appearance → Dark → pick the accent and background colours by hand
+2. Terminal → View → Settings → Appearance → Color scheme (dark) → your previous scheme
 3. `../Pop_OS-Cosmic-TokyoNight/firefox/install.sh`
+
+To switch to DarkGold instead, follow that repo's README.
 
 ---
 
@@ -165,6 +171,7 @@ cd Pop_OS-Cosmic-Monochrome
 | [Pop!_OS 24.04](https://pop.system76.com/) | Base OS by System76 |
 | [COSMIC DE](https://system76.com/cosmic) | Desktop environment |
 | [Pop_OS-Cosmic-TokyoNight](https://github.com/atraxsrc/Pop_OS-Cosmic-TokyoNight) | Color sibling rice |
+| [Pop_OS-Cosmic-DarkGold](https://github.com/atraxsrc/Pop_OS-Cosmic-DarkGold) | Gold sibling rice |
 | This repo | Monochrome accent variant |
 
 ## License
