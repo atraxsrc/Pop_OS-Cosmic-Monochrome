@@ -128,7 +128,8 @@ Not bundled. Gray / dark packs that work on COSMIC:
 - Tela Circle `grey-dark` / `black-dark`
 - kora-pgrey
 
-Wallpapers: https://github.com/atraxsrc/tokyonight-wallpapers
+Wallpapers: https://github.com/atraxsrc/cool-wallpapers (the gray astronauts in
+[`cosmic/`](https://github.com/atraxsrc/cool-wallpapers/tree/main/cosmic) suit this rice)
 
 ---
 
