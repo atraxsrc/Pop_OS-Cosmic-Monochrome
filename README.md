@@ -40,6 +40,8 @@ There is no hue. Status colours are lighter grays, not green / red.
 
 ```
 .
+├── btop
+│   └── Monochrome.theme         # btop colour theme
 ├── cosmic
 │   ├── Monochrome-Dark.ron      # COSMIC Appearance import
 │   ├── config/                  # baseline settings: fonts, icons, terminal look
@@ -188,6 +190,17 @@ up any existing `~/.config/fastfetch/config.jsonc` to `config.jsonc.bak`.
 fastfetch
 ```
 
+### btop
+
+`btop/Monochrome.theme`: near-black background, gray boxes, meters ramp from
+dim gray to near-white.
+
+```bash
+mkdir -p ~/.config/btop/themes
+cp btop/Monochrome.theme ~/.config/btop/themes/
+# btop → Esc → Options → Color theme → Monochrome
+```
+
 ---
 
 ## Icons and wallpaper
@@ -224,6 +237,7 @@ cd Pop_OS-Cosmic-Monochrome
 ./zsh/install.sh
 ./lsd/install.sh
 ./fastfetch/install.sh
+mkdir -p ~/.config/btop/themes && cp btop/Monochrome.theme ~/.config/btop/themes/
 
 # icons (see Icons above) + Maple fonts (https://github.com/subframe7536/maple-font), then
 # fonts, icons, terminal look from cosmic/config/
@@ -241,6 +255,7 @@ cd Pop_OS-Cosmic-Monochrome
 | [oh-my-zsh](https://ohmyz.sh/) | zsh framework + plugins |
 | [lsd](https://github.com/lsd-rs/lsd) | `ls` with icons and colours |
 | [fastfetch](https://github.com/fastfetch-cli/fastfetch) | System info |
+| [btop](https://github.com/aristocratos/btop) | Resource monitor |
 | [Tela](https://github.com/vinceliuice/Tela-icon-theme) | Icon pack (black) |
 
 ## License
