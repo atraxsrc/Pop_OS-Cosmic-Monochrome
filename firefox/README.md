@@ -1,4 +1,4 @@
-# Firefox — Monochrome Dark
+# Firefox - Monochrome Dark
 
 Firefox chrome matching the COSMIC monochrome rice. Same layout as Cosmic Night
 in the Tokyo Night repo, with lime and blue swapped for gray.
@@ -38,7 +38,7 @@ plus these stylesheets.
 
 Copies `chrome/` into your `*.default-release` profile, backs up anything it
 replaces, and adds the required pref to `user.js`. Then **fully restart**
-Firefox — `userChrome.css` is parsed only at startup.
+Firefox - `userChrome.css` is parsed only at startup.
 
 Manual equivalent:
 

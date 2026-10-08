@@ -7,7 +7,7 @@
      primary #aaaaaa  secondary #a7a7a7  border #bdbdbd
      success #cccccc
 
-   No :root overrides — variables stay on the popup they belong to.
+   No :root overrides - variables stay on the popup they belong to.
 
    Install:
      1. about:config -> toolkit.legacyUserProfileCustomizations.stylesheets = true

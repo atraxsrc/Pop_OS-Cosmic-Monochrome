@@ -41,7 +41,7 @@ command_exists() { command -v "$1" >/dev/null 2>&1; }
 # ── Config ─────────────────────────────────────────────────────────────────────
 
 # Phased updates: Ubuntu staggers non-security updates so a bad one only hits a
-# fraction of machines first. Setting this to "true" opts out of that — you pull
+# fraction of machines first. Setting this to "true" opts out of that - you pull
 # every update immediately and become an early tester. Security updates are never
 # phased, so they always install regardless of this setting.
 #   true  = always pull phased updates now (early-adopter)
@@ -80,7 +80,7 @@ update_system() {
         print_success "APT system update complete"
 
     else
-        print_error "No supported package manager found — skipping"
+        print_error "No supported package manager found - skipping"
         return 1
     fi
 }
@@ -88,7 +88,7 @@ update_system() {
 update_flatpak() {
     print_header "Flatpak"
     if ! command_exists flatpak; then
-        print_skip "Flatpak not installed — skipping"
+        print_skip "Flatpak not installed - skipping"
         return 0
     fi
 
@@ -104,7 +104,7 @@ update_snap() {
     print_header "Snap"
 
     if ! command_exists snap; then
-        print_skip "Snap not installed — skipping"
+        print_skip "Snap not installed - skipping"
         return 0
     fi
 
@@ -151,7 +151,7 @@ LOGO_GRAD=(
 
 # Draw the banner one character at a time, colouring by column index so the
 # gradient runs horizontally across the whole word. Every glyph gets the ramp,
-# including the box-drawing bevel characters (╔ ═ ╗ ║ ╚ ╝) — colouring those
+# including the box-drawing bevel characters (╔ ═ ╗ ║ ╚ ╝) - colouring those
 # separately puts stray marks inside the 0, the D bowl and the e, which reads
 # as noise sitting on top of the letters rather than as depth.
 print_logo() {
@@ -191,7 +191,7 @@ main() {
     start_time=$(date +%s)
 
     update_system || {
-        print_error "System package update failed — continuing with remaining tasks"
+        print_error "System package update failed - continuing with remaining tasks"
     }
 
     update_flatpak
