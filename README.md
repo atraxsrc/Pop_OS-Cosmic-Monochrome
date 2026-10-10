@@ -79,7 +79,10 @@ Settings → Desktop → Appearance → **Dark** → **Import** → `cosmic/Mono
 
 Accent tiles will all be gray. That is the theme. Use the `+` control if you want a custom swatch.
 
-Frosted glass is not stored as a look you will notice in the file (`is_frosted: false`). Set it on the Appearance → Style → Frosted glass page after import; those sliders survive a theme switch.
+Frosted glass is on in the `.ron` at `frosted: VeryLow` for windows, panel,
+applets and system UI (maximized apps stay solid), and corners are squared
+(`radius_*: 2.0`), the same as the DarkGold baseline. Adjust frosted glass on
+Appearance → Style → Frosted glass after import; those sliders survive a theme switch.
 
 Export from Appearance if you tweak backgrounds / tints so you do not lose them.
 
@@ -221,8 +224,8 @@ Wallpapers: https://github.com/atraxsrc/cool-wallpapers (the gray astronauts in
 ## Setup
 
 ```bash
-git clone https://github.com/atraxsrc/Pop_OS-Cosmic-Monochrome.git
-cd Pop_OS-Cosmic-Monochrome
+git clone https://github.com/atraxsrc/cosmic-monochrome-theme.git
+cd cosmic-monochrome-theme
 
 # desktop
 # Settings → Appearance → Dark → Import cosmic/Monochrome-Dark.ron

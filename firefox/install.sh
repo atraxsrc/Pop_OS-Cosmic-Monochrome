@@ -43,4 +43,4 @@ fi
 echo
 echo "Done. Fully restart Firefox - userChrome.css is only parsed at startup."
 echo "To switch back to Tokyo Night / Cosmic Night, run the install.sh from"
-echo "https://github.com/atraxsrc/Pop_OS-Cosmic-TokyoNight"
+echo "https://github.com/atraxsrc/cosmic-tokyonight-theme"
